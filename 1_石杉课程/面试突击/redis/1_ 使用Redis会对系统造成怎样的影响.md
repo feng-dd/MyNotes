@@ -75,7 +75,7 @@
 
 多机服务器下的方案：可以新建一个专门做读写请求队列的服务，让多套机器路由到这个内存队列中，实现方式不太合适。
 
-![image-20210603221536222](C:\Users\tph\AppData\Roaming\Typora\typora-user-images\image-20210603221536222.png)
+![image-20210603221536222](https://i.loli.net/2021/06/03/DAX41aEmCtLFhSK.png)
 
 建议使用redis作分布式锁，当有更新请求时加锁，设置过期时间，防止死锁。`加锁的方式都会影响并发性能。`
 
@@ -145,7 +145,7 @@ Redis CAS方案
 
 通过Zookeeper实现分布式锁，确保同一时刻只有一个实例去操作这个key，其他实例不能读写。
 
-![image-20210603225508980](C:\Users\tph\AppData\Roaming\Typora\typora-user-images\image-20210603225508980.png)
+![image-20210603225508980](https://i.loli.net/2021/06/03/3teSilIv5pwY8gU.png)
 
 从MySQL读数据时，连带修改时间一块读出来，写入缓存时，同时保存这条树的修改时间；
 
