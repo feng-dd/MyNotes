@@ -40,7 +40,7 @@
 > 2. 账号密码验证；
 > 3. 库表权限验证。
 
-![image-20210601213318140](https://i.loli.net/2021/06/01/aTschNyuM574LRz.png)
+<img src="https://i.loli.net/2021/06/01/aTschNyuM574LRz.png" alt="image-20210601213318140" style="zoom:150%;" />
 
 ## 三、Java与MySQL建立连接的方式
 
