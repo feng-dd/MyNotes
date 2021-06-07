@@ -41,6 +41,10 @@ public class SmsRouter {
         instance = newInstance;
     }
 
+    /**
+     * 获取短信服务商列表
+     * @return
+     */
     public Map<Integer, SmsInfo> getSmsInfoRouterMap() {
 //        return smsInfoRouterMap;
         // 防御性复制，外面获取并改变返回的Map,对本身的Map也不会影响
@@ -71,13 +75,23 @@ public class SmsRouter {
     }
 
     /**
-     * 跟新短信服务商路由
+     * 更新短信服务商路由
+     * 多线程下会存在：线程A setUrl后，线程B读取smsInfoRouterMap.get(3)，此时数据是错误的。
      */
     public void changeRoute(){
-        Map<Integer, SmsInfo> jGSmsInfo = instance.getSmsInfoRouterMap();
+//        Map<Integer, SmsInfo> jGSmsInfo = instance.getSmsInfoRouterMap();
 //        SmsInfo smsInfo = smsInfoRouterMap.get(3);
 //        smsInfo.setUrl("https://www.jiguang.com");
 //        smsInfo.setMaxSizeInBytes(184L);
+
+        // 1.更新数据库中的短信服务商列表
+        updateSmsRouteInfoLists();
+        // 2.更新内存中的短信服务商列表
+        SmsRouter.setInstance(new SmsRouter());
+    }
+
+    private void updateSmsRouteInfoLists() {
+        // todo ...
     }
 
 }
