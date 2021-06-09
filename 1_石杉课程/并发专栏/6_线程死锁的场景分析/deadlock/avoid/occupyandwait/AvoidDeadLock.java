@@ -1,8 +1,5 @@
 package deadlock.avoid.occupyandwait;
 
-import deadlock.Lock1;
-import deadlock.Lock2;
-
 /**
  * @Author Murphy
  * @Version 1.0
@@ -11,14 +8,12 @@ import deadlock.Lock2;
  * @Since 1.0
  */
 public class AvoidDeadLock {
-    public static String obj1 = "obj1";
-    public static String obj2 = "obj2";
 
     public static void main(String[] args) {
-        Thread a = new Thread(new Lock1());
-        Thread b = new Thread(new Lock2());
-        a.start();
-        b.start();
+        Account a = new Account();
+        Account b = new Account();
+        a.transfer(b,100);
+        b.transfer(a,200);
     }
 
 }

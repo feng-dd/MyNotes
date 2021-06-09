@@ -11,8 +11,6 @@ public class Account {
 
     private Allocator actr = Allocator.getInstance();
 
-    private void Allocator(){};
-
     private int balance;
 
     // 转账

@@ -7,7 +7,7 @@ import java.util.List;
  * @Author Murphy
  * @Version 1.0
  * @Date 2021/6/9 17:02
- * @Desc
+ * @Desc 单例类
  * @Since 1.0
  */
 public class Allocator {
