@@ -14,7 +14,7 @@
 
 ### 类比
 
-![image-20210610152436803](D:\develop_data\feng\MyNotes\1_石杉课程\并发专栏\7_Guarded Suspension模式\Guarded Suspension模式.assets\image-20210610152436803.png)
+![image-20210610152436803](https://i.loli.net/2021/06/15/2DV6MmWghjy8vzn.png)
 
 > 1. 客户排队点单；**线程等待获取锁**
 > 2. 点单；**线程申请到锁**
