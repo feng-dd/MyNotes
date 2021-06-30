@@ -8,7 +8,7 @@
 
 ###### 同步执行
 
-![image-20210628104058272](https://i.loli.net/2021/06/28/OxHjJFkXft4Uh1e.png)
+![image-20210630140947681](https://i.loli.net/2021/06/30/6Vv1ELCUZtY8Fbg.png)
 
 烧水到水开：5min
 
@@ -47,7 +47,11 @@
 > 3. Promise：包含了异步执行任务返回结果的对象；
 > 4. result：异步任务执行的结果，从 Promise 对象中获取。
 
-![image-20210628111357668](https://i.loli.net/2021/06/28/ECYc2hkn1HloM9a.png)
+![image-20210630141023747](https://i.loli.net/2021/06/30/8Lxfyj2XsieChOr.png)
 
 ![image-20210628113121088](https://i.loli.net/2021/06/28/xmWuXI7DlATwGhj.png)
+
+### 云盘上传数据案例
+
+![image-20210630140731695](https://i.loli.net/2021/06/30/nE1VcsmjJYp7t3q.png)
 
