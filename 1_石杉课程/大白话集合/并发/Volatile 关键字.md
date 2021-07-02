@@ -33,7 +33,19 @@
 >
 > 但在多线程执行的情况下可能会造成线程安全的问题。
 
-`Volatile 通过内存屏障和 happens-before 原则防止指令重拍`
+```java
+if (inited == false) { 
+   context = loadContext();   //语句1
+   inited = true;             //语句2
+}
+doSomethingwithconfig(context); //语句3
+```
+
+语句1和语句2之间不存在数据依赖，语句2可能会和语句1并行执行或先执行，单线程中不会出现问题；
+
+多线程时，当t1先执行语句2，t2获取到的`inited=flase`，此时t1还加载context，可能产生未知错误。
+
+`Volatile 通过内存屏障和 happens-before 原则防止指令重排`
 
 #### 内存屏障（内存栅栏）`CPU层面禁止指令重排序`
 
