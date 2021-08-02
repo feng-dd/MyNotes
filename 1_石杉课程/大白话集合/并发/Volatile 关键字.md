@@ -66,6 +66,6 @@ doSomethingwithconfig(context); //语句3
 |            volatile 读             | LoadLoad/LoadStore |  LoadLoad   |      LoadStore       |
 |            volatile 写             |                    |  StoreLoad  |      StoreStore      |
 
-- 第一个 Volatile 读操作不允许放在第二操作之后
-- 第二个 Volatile 写操作不允许放在第一操作之前
+- 第一个 Volatile 读操作不允许放在第二次读/写操作之后
+- 第二个 Volatile 写操作不允许放在第一次读/写操作之前
 - 两个Volatile 读写操作不允许重排序
